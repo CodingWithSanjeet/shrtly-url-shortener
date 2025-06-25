@@ -99,7 +99,7 @@ Visit `http://localhost:5000` to access the application.
 | Feature | Screenshot |
 |---------|------------|
 | **Login Page** | <img width="947" alt="Login Page" src="https://github.com/user-attachments/assets/3c62ac10-2ef7-4fd8-aeea-1095f4eda8ca" /> |
-| **Dashboard** | <img width="958" alt="Dashboard" src="https://github.com/user-attachments/assets/c10bc634-2d9d-4884-bce0-23cc776ce656" /> |
+| **Dashboard** | <img width="952" alt="image" src="https://github.com/user-attachments/assets/d1f841c1-236a-4907-ad56-fcec966b42d8" /> |
 | **Signup Page** | <img width="949" alt="Signup Page" src="https://github.com/user-attachments/assets/604d4363-905b-41c6-bdc6-8e5896625892" /> |
 
 *Screenshots showcase the modern glass-morphism design with purple-pink gradient theme*

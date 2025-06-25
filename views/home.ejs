@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shrt.ly - URL Shortener Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="brand-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.5 2L20.5 9H17V15C17 16.1 16.1 17 15 17H9C7.9 17 7 16.1 7 15V9H3.5L10.5 2C11.9 0.6 14.1 0.6 15.5 2H13.5ZM9 9V15H15V9H9ZM12 20C13.1 20 14 20.9 14 22H10C10 20.9 10.9 20 12 20Z"/>
+                    </svg>
+                </div>
+                <h1 class="logo-text">shrt.ly</h1>
+            </div>
+            <p>Shorten, track, and manage your URLs</p>
+        </div>
+        
+        <div class="form-container">
+            <form action="/url" method="post" class="url-form">
+                <label for="originalUrl">Enter Your Original URL</label>
+                <input type="text" id="originalUrl" name="originalUrl" placeholder="https://example.com" required>
+                <button type="submit">Generate Short URL</button>
+            </form>
+        </div>
+        <div class="table-container">
+            <% if (urls && urls.length > 0) { %>
+                <div class="table-wrapper">
+                    <table>
+                        <thead class="table-header">
+                            <tr>
+                                <th>S.No</th>
+                                <th>Short Code</th>
+                                <th>Redirect URL</th>
+                                <th>Clicks</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="table-body-wrapper">
+                        <table>
+                            <tbody class="table-body">
+                                <% urls.forEach((url, index) => { %>
+                                 <tr>
+                                    <td class="serial-number"><%= index+1 %></td>
+                                    <td><span class="short-code"><%= url.shortCode %></span></td>
+                                    <td class="redirect-url" title="<%= url.originalUrl %>"><%= url.originalUrl %></td>
+                                    <td class="click-count"><span class="badge"><%= url.visitCount %></span></td>
+                                 </tr>
+                                <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            <% } else { %>
+                <div class="empty-state">
+                    <h3>No URLs Found</h3>
+                    <p>Start creating some short URLs to see them here!</p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

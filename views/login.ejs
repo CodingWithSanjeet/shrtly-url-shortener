@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - shrt.ly</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5 2L20.5 9H17V15C17 16.1 16.1 17 15 17H9C7.9 17 7 16.1 7 15V9H3.5L10.5 2C11.9 0.6 14.1 0.6 15.5 2H13.5ZM9 9V15H15V9H9ZM12 20C13.1 20 14 20.9 14 22H10C10 20.9 10.9 20 12 20Z"/>
+                        </svg>
+                    </div>
+                    <h1 class="logo-text">shrt.ly</h1>
+                </div>
+                <p>Sign in to your account</p>
+            </div>
+            
+            <form action="/user/login" method="post" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <div class="email error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <div class="password error"></div>
+                </div>
+                
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember" class="checkbox-label">Remember me</label>
+                    </div>
+                    <a href="/forgot-password" class="forgot-link">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="auth-button">Sign In</button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="/signup">Create Account</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

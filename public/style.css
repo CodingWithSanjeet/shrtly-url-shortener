@@ -183,6 +183,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     background: white;
+    table-layout: fixed;
 }
 
 .table-header {
@@ -192,6 +193,35 @@ table {
 
 .table-body {
     background: white;
+}
+
+/* Fixed column widths for proper alignment */
+.table-wrapper table {
+    table-layout: fixed;
+}
+
+.table-wrapper th:nth-child(1),
+.table-wrapper td:nth-child(1) {
+    width: 80px;
+    text-align: center;
+}
+
+.table-wrapper th:nth-child(2),
+.table-wrapper td:nth-child(2) {
+    width: 150px;
+    text-align: center;
+}
+
+.table-wrapper th:nth-child(3),
+.table-wrapper td:nth-child(3) {
+    width: auto;
+    min-width: 200px;
+}
+
+.table-wrapper th:nth-child(4),
+.table-wrapper td:nth-child(4) {
+    width: 120px;
+    text-align: center;
 }
 
 /* Remove the old thead styling since we're using table-header class */
@@ -234,7 +264,6 @@ tbody tr:last-child td {
     font-weight: 600;
     color: #667eea;
     text-align: center;
-    width: 80px;
 }
 
 .short-code {
@@ -245,6 +274,9 @@ tbody tr:last-child td {
     color: #495057;
     font-weight: 500;
     display: inline-block;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .redirect-url {
